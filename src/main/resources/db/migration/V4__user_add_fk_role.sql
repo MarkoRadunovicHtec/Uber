@@ -1,0 +1,5 @@
+ALTER TABLE IF EXISTS public."user"
+    ADD CONSTRAINT fk_user_role_id FOREIGN KEY (role_id)
+    REFERENCES public.role (id) MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION;

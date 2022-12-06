@@ -1,0 +1,14 @@
+services:
+  uber-db:
+    image: postgres:latest
+    container_name: uber-db
+    ports:
+      - 5432:5432
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=112233
+      - POSTGRES_DB=uber
+volumes:
+  pgdata:
