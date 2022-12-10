@@ -1,6 +1,8 @@
 CREATE TABLE public.passenger
 (
     id uuid NOT NULL DEFAULT uuid_generate_v4 (),
+    first_name character varying (255) NOT NULL,
+    last_name character varying (255) NOT NULL,
     age integer NOT NULL,
     gender character varying(50) NOT NULL,
     latitude double precision,

@@ -10,6 +10,8 @@ import lombok.NoArgsConstructor;
 public class DriverInputRequest {
 
     private String age;
+    private String firstName;
+    private String lastName;
     private String gender;
     private String status;
     private String latitude;

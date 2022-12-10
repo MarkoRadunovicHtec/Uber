@@ -19,6 +19,8 @@ public class PassengerEntity {
     @GeneratedValue
     private UUID id;
 
+    private String firstName;
+    private String lastName;
     private int age;
     private String gender;
     private double latitude;

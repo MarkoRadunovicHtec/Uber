@@ -28,8 +28,6 @@ public class CustomUserDetailsService implements UserDetailsService {
 
         return new LoggedUserDto(
                 userEntity.getId(),
-                userEntity.getFirstName(),
-                userEntity.getLastName(),
                 userEntity.getEmail(),
                 userEntity.getEncryptedPassword(),
                 true,

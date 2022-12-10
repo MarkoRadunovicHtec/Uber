@@ -19,6 +19,8 @@ public class DriverEntity {
     @GeneratedValue
     private UUID id;
 
+    private String firstName;
+    private String lastName;
     private int age;
     private String gender;
     private String status;

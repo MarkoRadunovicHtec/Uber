@@ -12,11 +12,9 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 public class LoggedUserResponse {
-    private UUID id;
-    private String firstName;
-    private String lastName;
-    private String email;
 
+    private UUID id;
+    private String email;
     @With
     private List<String> roles;
 }

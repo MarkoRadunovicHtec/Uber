@@ -12,6 +12,8 @@ import java.util.UUID;
 public class DriverResponse {
 
     private UUID id;
+    private String firstName;
+    private String lastName;
     private int age;
     private String gender;
     private String status;

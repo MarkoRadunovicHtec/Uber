@@ -3,6 +3,7 @@ package com.htecgroup.uber.service.impl;
 import com.htecgroup.uber.exception.user.UserNotFoundException;
 import com.htecgroup.uber.model.entity.PassengerEntity;
 import com.htecgroup.uber.model.entity.RoleEntity;
+import com.htecgroup.uber.model.request.DriveRequest;
 import com.htecgroup.uber.model.request.PassengerInputRequest;
 import com.htecgroup.uber.model.response.PassengerResponse;
 import com.htecgroup.uber.repository.PassengerRepository;
@@ -38,5 +39,10 @@ public class PassengerServiceImpl implements PassengerService {
         userService.changeRole(currentUserId, RoleEntity.ROLE_PASSENGER);
 
         return modelMapper.map(passengerEntity, PassengerResponse.class);
+    }
+
+    @Override
+    public void createDriveRequest(DriveRequest driveRequest, UUID driverId) {
+
     }
 }

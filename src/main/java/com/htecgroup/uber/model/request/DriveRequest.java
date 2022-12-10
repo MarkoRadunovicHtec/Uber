@@ -7,7 +7,10 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserRegisterRequest {
-    private String email;
-    private String password;
+public class DriveRequest {
+
+    double latitude;
+    double longitude;
+    double latitudeDestination;
+    double longitudeDestination;
 }

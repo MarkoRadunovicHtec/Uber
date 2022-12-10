@@ -12,14 +12,10 @@ import java.util.stream.Collectors;
 @Getter
 public class LoggedUserDto extends User {
     private UUID id;
-    private String firstName;
-    private String lastName;
     private boolean isActive;
 
     public LoggedUserDto(
             UUID id,
-            String firstName,
-            String lastName,
             String email,
             String password,
             boolean enabled,
@@ -36,8 +32,6 @@ public class LoggedUserDto extends User {
                 accountNonLocked,
                 authorities);
         this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
     }
 
     public boolean hasRole(String roleName) {

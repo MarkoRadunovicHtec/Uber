@@ -12,6 +12,8 @@ import java.util.UUID;
 public class PassengerResponse {
 
     private UUID id;
+    private String firstName;
+    private String lastName;
     private int age;
     private String gender;
     private double latitude;
