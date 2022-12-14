@@ -7,10 +7,10 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class DriveRequest {
+public class TransportRequestRequest {
 
-    double latitude;
-    double longitude;
+    double latitudeLocation;
+    double longitudeLocation;
     double latitudeDestination;
     double longitudeDestination;
 }
