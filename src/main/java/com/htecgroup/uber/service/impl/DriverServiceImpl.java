@@ -36,7 +36,7 @@ public class DriverServiceImpl implements DriverService {
 
         UUID currentUserId = currentUserService.getLoggedUser().getId();
         DriverEntity driverEntity = modelMapper.map(driverInputRequest, DriverEntity.class);
-        driverEntity.setUserEntity(userRepository.findById(currentUserId).orElseThrow(UserNotFoundException::new));
+        driverEntity.setUser(userRepository.findById(currentUserId).orElseThrow(UserNotFoundException::new));
         driverEntity = driverRepository.save(driverEntity);
         userService.changeRole(currentUserId, RoleEntity.ROLE_DRIVER);
 
@@ -48,7 +48,7 @@ public class DriverServiceImpl implements DriverService {
     public DriverResponse editPricePerKm(PricePerKmChangeRequest ppkChangeRequest) {
 
         UUID currentUserId = currentUserService.getLoggedUser().getId();
-        DriverEntity driverEntity = driverRepository.findByUserEntityId(currentUserId).orElseThrow(DriverNotFoundException::new);
+        DriverEntity driverEntity = driverRepository.findByUser(currentUserId).orElseThrow(DriverNotFoundException::new);
         modelMapper.map(ppkChangeRequest, driverEntity);
         driverRepository.save(driverEntity);
 

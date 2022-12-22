@@ -33,7 +33,7 @@ public class PassengerServiceImpl implements PassengerService {
 
         UUID currentUserId = currentUserService.getLoggedUser().getId();
         PassengerEntity passengerEntity = modelMapper.map(passengerInputRequest, PassengerEntity.class);
-        passengerEntity.setUserEntity(userRepository.findById(currentUserId).orElseThrow(UserNotFoundException::new));
+        passengerEntity.setUser(userRepository.findById(currentUserId).orElseThrow(UserNotFoundException::new));
         passengerEntity = passengerRepository.save(passengerEntity);
         userService.changeRole(currentUserId, RoleEntity.ROLE_PASSENGER);
 

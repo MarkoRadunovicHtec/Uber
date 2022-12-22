@@ -15,6 +15,9 @@ import java.util.UUID;
 @AllArgsConstructor
 public class DriverEntity {
 
+    public static final String STATUS_AVAILABLE = "available";
+    public static final String STATUS_BUSY = "busy";
+
     @Id
     @GeneratedValue
     private UUID id;
@@ -31,5 +34,5 @@ public class DriverEntity {
 
     @OneToOne
     @JoinColumn(name = "user_id", nullable = false)
-    private UserEntity userEntity;
+    private UserEntity user;
 }

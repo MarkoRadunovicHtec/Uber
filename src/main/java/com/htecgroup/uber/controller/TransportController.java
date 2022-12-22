@@ -26,4 +26,11 @@ public class TransportController {
         transportService.makeTransportRequest(transportRequestRequest, driverId);
         return ResponseEntity.ok(true);
     }
+
+    @PreAuthorize("hasAuthority(T(com.htecgroup.uber.model.entity.RoleEntity).ROLE_DRIVER)")
+    @PutMapping("/{passengerId}/request-accept")
+    public ResponseEntity<Boolean> acceptTransportRequest(@PathVariable UUID passengerId) {
+        transportService.acceptTransportRequest(passengerId);
+        return ResponseEntity.ok(true);
+    }
 }

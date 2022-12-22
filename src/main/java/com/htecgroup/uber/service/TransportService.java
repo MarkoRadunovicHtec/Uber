@@ -6,5 +6,7 @@ import java.util.UUID;
 
 public interface TransportService {
 
-    public void makeTransportRequest(TransportRequestRequest transportRequestRequest, UUID driverId);
+    void makeTransportRequest(TransportRequestRequest transportRequestRequest, UUID driverId);
+
+    void acceptTransportRequest(UUID passengerId);
 }
