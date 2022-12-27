@@ -8,5 +8,5 @@ import java.util.UUID;
 
 public interface TransportRequestRepository extends JpaRepository<TransportRequestEntity, UUID> {
 
-    Optional<TransportRequestEntity> findByDriverAndPassengerAndStatus(UUID driverId, UUID passengerId, String status);
+    Optional<TransportRequestEntity> findByDriverIdAndPassengerIdAndStatus(UUID driverId, UUID passengerId, String status);
 }
